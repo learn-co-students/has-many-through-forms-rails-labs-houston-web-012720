@@ -1,0 +1,13 @@
+<h1>Category Info</h1>
+
+<label>Name: <%= @category.name%></label><br>
+
+<label>Posts:</label><br>
+<ul>
+  <%@category.posts.each { |post|%>
+    <li>
+      <%= link_to  post.title, post_path(post) %>
+    </li>
+  <%}%>
+</ul>
+

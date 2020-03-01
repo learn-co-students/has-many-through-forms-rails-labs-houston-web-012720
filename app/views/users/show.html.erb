@@ -1,1 +1,13 @@
 
+<h1>User Info</h1>
+
+<label>Name: <%= @user.username%></label><br>
+<label>Email: <%= @user.email%></label><br>
+<label>Posts commented:</label><br>
+<ul>
+  <%@user.posts.each { |post|%>
+    <li>
+      <%= link_to  post.title, post_path(post) %>
+    </li>
+  <%}%>
+</ul>

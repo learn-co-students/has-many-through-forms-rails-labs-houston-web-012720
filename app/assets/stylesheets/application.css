@@ -2,14 +2,107 @@
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
  *
  *= require_tree .
  *= require_self
  */
+
+ @import url("https://fonts.googleapis.com/css?family=Walter+Turncoat");
+
+ body {
+  font-family: 'Walter Turncoat', cursive;
+  background-color: lightsteelblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#error {
+  color: red
+}
+
+
+h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+form {
+  width: -webkit-fill-available;
+  max-width: 40vw;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="submit"] {
+  width: 10vw;
+  min-width: fit-content;
+  align-self: center;
+  background-color: #5cb85c;
+}
+
+label {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+p, a, li, img {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+li a {
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+  display: block;
+  
+}
+
+li a:hover {
+  font-size: 1.7rem;
+  color: #808080;
+}
+
+li {
+  border-bottom: 1px solid #ccc;
+}
+
+li:last-child {
+  border: none;
+}
+
+p {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+form label {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+form input, form select {
+  border: 2px solid lightslategray;
+  height: 40px;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+form input:focus {
+  outline: none;
+  border: 2px solid darkslategray;
+}
